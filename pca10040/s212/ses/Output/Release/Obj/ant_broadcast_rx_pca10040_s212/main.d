@@ -1,5 +1,5 @@
 Output/Release/Obj/ant_broadcast_rx_pca10040_s212/main.o: \
- C:\nrf_sdk\nRF5_SDK_17.1.0_ddde560\examples\ant\ant_broadcast\Prova_ANT\main.c \
+ C:\nrf_sdk\nRF5_SDK_17.1.0_ddde560\examples\ant\ant_broadcast\test_ANT\main.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.70a/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.70a/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.70a/include/string.h \

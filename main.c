@@ -18,14 +18,14 @@
 #include "nrf_log_default_backends.h"
 
 #include "nrf_delay.h"
-#include "nrf_gpio.h"
+#include "nrf_gpio.h" //potrebbe non servire
 #include "nrf_drv_saadc.h"
 //#include "nrf_drv_clock.h" //da qualche errore, rimosso il .c (da lucchesini posso comunque commentarlo e non da errore)
 #include "nrf_nvmc.h"
 #include "app_timer.h"
 
 #include "nrf_drv_twi.h"
-
+//includere tutte le librerie per i sensori
 //=============================================================================================================================================================================
 /*
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,9 +35,31 @@
 #define TWI_ADDRESSES   127         //Number of possible TWI addresses.
 #define APP_ANT_OBSERVER_PRIO   1   // Application's ANT observer priority. You shouldn't need to modify this value.
 #define SAADC_BATTERY   0           //Canale tensione della batteria
-#define TIMEOUT_VALUE   25          // 25 mseconds timer time-out value. Interrupt a 40Hz
+#define TIMEOUT_VALUE   25   //1000       // 25 mseconds timer time-out value. Interrupt a 40Hz
 #define START_ADDR  0x00011200      //indirizzo di partenza per salvataggio dati in memoria non volatile
+#define LED             07
+
+#define SECONDS_2           2       //interval of 2 seconds
+#define SECONDS_20          20      //interval of 20 seconds
 //=============================================================================================================================================================================
+
+struct data{
+    uint8_t giorno;
+    uint8_t mese;
+    uint8_t anno;
+};
+
+struct val_campionati{
+    float Temp;
+    float Hum;
+    float Pres;
+    float PM2p5;
+    float PM1p0;    //controlla che sia corretto, scegliere quali valori guardare di PM
+    float CO2;
+    float CO;
+    float NO2;
+    float VOC;
+};
 
 //=============================================================================================================================================================================
 /*
@@ -48,6 +70,8 @@
 volatile int count=0, stato=0, i=0;
 const float deltat = 0.025;
 int notshown = 1;           // per il log
+
+int rtc_count = 0;
 
 nrf_saadc_value_t sample;   //variabile per campionamento 
 ret_code_t err_code;        //variabile per valore di ritorno
@@ -92,12 +116,7 @@ void twi_init (void)
 }
 //=============================================================================================================================================================================
 
-
-
-
 APP_TIMER_DEF(m_repeated_timer_id);     /*Handler for repeated timer */
-
-
 
 //=============================================================================================================================================================================
 /*
@@ -201,7 +220,7 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
                         stato=0;	//ferma l'acquisizione												
-                        nrf_gpio_pin_set(06);
+                        nrf_gpio_pin_set(LED);
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
                         NRF_LOG_INFO("Ricevuto messaggio di stop acquisizione");
                           
@@ -210,7 +229,7 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
                     {
                         NRF_LOG_INFO("Inizio acquisizione");	
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
-                        nrf_gpio_pin_clear(06);
+                        nrf_gpio_pin_clear(LED);
                         count=0;
                         i=0;
                         stato = 1;
@@ -281,36 +300,37 @@ static void ant_channel_rx_broadcast_setup(void)
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
 
-static void repeated_timer_handler(void * p_context)  //app timer
+static void repeated_timer_handler(void * p_context)  //app timer, faccio scattare ogni un secondo
 { 
-     if(flag_cal) return; //se la calibrazione è in corso non fa niente
-//Prima c'era lettura dell'IMU
-
+    rtc_count ++;
+    //controllo della batteria, ogni quanto? come il campionamento, e come fare controllo? voltage divider?
     err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
     APP_ERROR_CHECK(err_code);
-    
-    if(stato == 0 && notshown ) 
-    { 
-        NRF_LOG_INFO("Attesa messaggio di inizio aquisizione"); notshown = 0;
-    }
-    i++;
-    i = (i > 3) ? 0 : i; 
 
-    if(stato == 1 && i == 0) 
+    //1 sec
+    //Lettura dati VOC
+    
+    //2 sec
+    if ((rtc_count % SECONDS_2) == 0)
     {
-        //ant_send( sample, count,quat[0] ,quat[1] ,quat[2] ,quat[3] );
-        ant_send(sample, count, 1, 2, 3, 4);
-        count++;
-        nrf_gpio_pin_clear(06);
-    }									                  
+        //invio ant
+    }
+
+    //20 sec
+    if ((rtc_count % SECONDS_20) == 0)
+    {
+        //campiono tutti i valori, flag e si fa nel main, confronto con umidità
+        //rtc_count = 0 se non mi serve intervallo più grande
+    }
+									                  
 }
 //=============================================================================================================================================================================
 
 
 int main(void)
 {
-    nrf_gpio_cfg_output(06);
-    nrf_gpio_pin_set(06);
+    nrf_gpio_cfg_output(LED);
+    nrf_gpio_pin_set(LED);
     //Inizializzazione di tutte le componenti
     log_init();
     saadc_init();
@@ -338,12 +358,18 @@ int main(void)
                             repeated_timer_handler);
     APP_ERROR_CHECK(err_code);
 
-    nrf_gpio_pin_clear(06);
+    nrf_gpio_pin_clear(LED);
     err_code = nrf_pwr_mgmt_init();
     APP_ERROR_CHECK(err_code);
     
     err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
     APP_ERROR_CHECK(err_code);	
+
+    /* 
+     * Inizializzazione dei sensori e settaggio dei parametri con le funzioni apposite
+     * Tenere traccia del giorno e vedere quanto è passato per fare pulizia della ventola
+     * 
+     */
 
     // Main loop.
     for (;;)
