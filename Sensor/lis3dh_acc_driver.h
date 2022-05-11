@@ -560,6 +560,12 @@ status_t LIS3DH_GetTempRaw(int8_t* val);
 status_t LIS3DH_GetWHO_AM_I(uint8_t* val);
 status_t LIS3DH_Get6DPosition(uint8_t* val);
 
+struct lis3dh_data{
+    int16_t AccZ;
+    int16_t AccY;
+    int16_t AccX;
+};
+
 //Generic
 // i.e. uint8_t LIS3DH_ReadReg(uint8_t Reg, uint8_t* Data);
 // i.e. uint8_t LIS3DH_WriteReg(uint8_t Reg, uint8_t Data);

@@ -26,6 +26,11 @@
 
 #include "nrf_drv_twi.h"
 //includere tutte le librerie per i sensori
+#include "sps30.h"
+#include "scd4x_i2c.h"
+#include "bme280.h"
+#include "lis3dh_acc_driver.h"
+#include <math.h>
 //=============================================================================================================================================================================
 /*
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,8 +44,13 @@
 #define START_ADDR  0x00011200      //indirizzo di partenza per salvataggio dati in memoria non volatile
 #define LED             07
 
-#define SECONDS_2           2       //interval of 2 seconds
-#define SECONDS_20          20      //interval of 20 seconds
+#define NO2_CHANNEL     0           //NO2 channel for ADC
+#define CO_CHANNEL      2           //CO channel for ADC
+
+#define _2_SEC          2       //interval of 2 seconds
+#define _20_SEC         20      //interval of 20 seconds
+
+
 //=============================================================================================================================================================================
 
 struct data{
@@ -61,6 +71,16 @@ struct val_campionati{
     float VOC;
 };
 
+struct mics6814_data{
+    uint16_t NO2;
+    uint16_t CO;
+};
+
+struct scd4x_data{
+    uint16_t CO2;
+    int32_t Temperature;
+    int32_t Humidity;
+};
 //=============================================================================================================================================================================
 /*
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,13 +92,23 @@ const float deltat = 0.025;
 int notshown = 1;           // per il log
 
 int rtc_count = 0;
+uint8_t flag_misurazioni = 0;
+float partial_calc = 0;        //variable to maintein partial calculation
 
-nrf_saadc_value_t sample;   //variabile per campionamento 
+nrf_saadc_value_t adc_val;  //variabile per campionamento 
 ret_code_t err_code;        //variabile per valore di ritorno
 
 //PUò ESSERE CHE QUESTE DUE VARIABILI NON MI SERVANO POI (al momento serve per ant)
 volatile int cal_rec = 0;   //impedisce che si faccia più di una calibrazione, se se ne vuole fare un'altra bisogna spegnere e riaccendere
 volatile int flag_cal = 0;  //flag che definisce calibrazione in corso
+
+//VARIABILI DEI SENSORI
+struct bme280_dev           dev_bme280;         //struct for BME280
+struct bme280_data          measure_bme280;     //struct for measured values by BME280
+struct sps30_measurement    measure_sps30;      //struct for measured values by SPS30
+struct lis3dh_data          measure_lis3dh;     //struct for measured values by LIS3DH
+struct mics6814_data        measure_mics6814;   //struct for measured values by MICS6814
+struct scd4x_data          measure_scd4x;     //struct for measured values by SCD41
 //=============================================================================================================================================================================
 
 //=============================================================================================================================================================================
@@ -128,20 +158,26 @@ void saadc_callback(nrf_drv_saadc_evt_t const * p_event)  //non serve
 {
 }
 
-void saadc_init(void)
+void saadc_init(void)   //prova a mettere low power mode
 {
     ret_code_t err_code;
-    nrf_saadc_channel_config_t channel_config = NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN0);
-    nrf_saadc_channel_config_t channel2_config = NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_VDD);
+    nrf_saadc_channel_config_t channel1_config = NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN1);
+    nrf_saadc_channel_config_t channel3_config = NRF_DRV_SAADC_DEFAULT_CHANNEL_CONFIG_SE(NRF_SAADC_INPUT_AIN3);
 
     err_code = nrf_drv_saadc_init(NULL, saadc_callback);
     APP_ERROR_CHECK(err_code);
 
-    err_code = nrf_drv_saadc_channel_init(SAADC_BATTERY, &channel_config);
+    err_code = nrf_drv_saadc_channel_init(NO2_CHANNEL, &channel1_config);
     APP_ERROR_CHECK(err_code);
 	
-    err_code = nrf_drv_saadc_channel_init(1, &channel2_config);
+    err_code = nrf_drv_saadc_channel_init(CO_CHANNEL, &channel3_config);
     APP_ERROR_CHECK(err_code); 
+}
+//Transform the ADC value in bit in voltage value
+float adc_to_volts (int adc)
+{
+    float volts = (adc + 5) * 3.6 / 1023;
+    return volts;
 }
 //=============================================================================================================================================================================
 
@@ -217,6 +253,7 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
             case EVENT_RX:
                 if (p_ant_evt->message.ANT_MESSAGE_ucMesgID == MESG_BROADCAST_DATA_ID)
                 {
+                    
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
                         stato=0;	//ferma l'acquisizione												
@@ -304,23 +341,24 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
 { 
     rtc_count ++;
     //controllo della batteria, ogni quanto? come il campionamento, e come fare controllo? voltage divider?
-    err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
+    //err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
     APP_ERROR_CHECK(err_code);
 
     //1 sec
     //Lettura dati VOC
     
     //2 sec
-    if ((rtc_count % SECONDS_2) == 0)
+    if ((rtc_count % _2_SEC) == 0)
     {
         //invio ant
     }
 
     //20 sec
-    if ((rtc_count % SECONDS_20) == 0)
+    if ((rtc_count % _20_SEC) == 0)
     {
         //campiono tutti i valori, flag e si fa nel main, confronto con umidità
         //rtc_count = 0 se non mi serve intervallo più grande
+        flag_misurazioni = 1; //eseguire misurazioni ogni 20 sec nel main
     }
 									                  
 }
@@ -346,7 +384,7 @@ int main(void)
     memset(message_addr, 11, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
 
     //err_code = nrf_drv_saadc_sample_convert(SAADC_REFERENCE, &sample);  //campiona tensione alimentazione (1.8V)
-    message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE - 1] = sample;  //invia campione nell'ultimo byte del payload
+    message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE - 1] = adc_val;  //invia campione nell'ultimo byte del payload
 		
     err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                            ANT_STANDARD_DATA_PAYLOAD_SIZE,
@@ -365,6 +403,10 @@ int main(void)
     err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
     APP_ERROR_CHECK(err_code);	
 
+    sps30_init();
+    //scd41 non serve init
+    bme280_init_set(&dev_bme280);
+    lis3dh_init();
     /* 
      * Inizializzazione dei sensori e settaggio dei parametri con le funzioni apposite
      * Tenere traccia del giorno e vedere quanto è passato per fare pulizia della ventola
@@ -374,7 +416,45 @@ int main(void)
     // Main loop.
     for (;;)
     {
-        NRF_LOG_FLUSH();
+        if(flag_misurazioni == 1)   //esegui tutte le misurazioni tranne VOC
+        {
+            float partial_calc = 0;        //variable to maintein partial calculation
+//ha senso guardare se restituiscono o meno errore queste funzioni?
+            
+            //unire sps e scd per fare un unico delay
+            
+            //SPS30 
+            sps30_wake_up();
+            sps30_start_measurement();
+            nrf_delay_ms(1000);
+            sps30_read_measurement(&measure_sps30);
+            sps30_stop_measurement();
+            sps30_sleep();
+
+            //SCD41
+            scd4x_wake_up();
+            scd4x_measure_single_shot();
+            nrf_delay_ms(100);
+            scd4x_read_measurement(&measure_scd4x.CO2, &measure_scd4x.Temperature, &measure_scd4x.Humidity);
+            scd4x_power_down();
+
+            //MICS6814
+            nrfx_saadc_sample_convert(NO2_CHANNEL, &adc_val); //A1
+            partial_calc = (5 - adc_to_volts(adc_val))/adc_to_volts(adc_val);
+            measure_mics6814.NO2 = pow(10, (log10(partial_calc) -0.804)/(1.026))*1000;
+            nrfx_saadc_sample_convert(CO_CHANNEL, &adc_val); //A3
+            partial_calc = (5 - adc_to_volts(adc_val))/adc_to_volts(adc_val);
+            measure_mics6814.CO = pow(10, (log10(partial_calc)-0.55)/(-0.85))*1000;      //controlla questa formula
+            
+            //BME280
+            bme280_set_sensor_mode(BME280_FORCED_MODE, &dev_bme280);
+            bme280_get_sensor_data(BME280_ALL, &measure_bme280, &dev_bme280);
+    
+            //LIS3DH
+            //scegliere ogni quanto campionare         
+        }
+
+        //NRF_LOG_FLUSH();
         nrf_pwr_mgmt_run();
     }
 }

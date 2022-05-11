@@ -108,6 +108,17 @@
       <file file_name="../../../../../../../components/softdevice/common/nrf_sdh.c" />
       <file file_name="../../../../../../../components/softdevice/common/nrf_sdh_ant.c" />
     </folder>
+    <folder Name="Sensori">
+      <file file_name="../../../Sensor/bme68x.c" />
+      <file file_name="../../../Sensor/bme280.c" />
+      <file file_name="../../../Sensor/common.c" />
+      <file file_name="../../../Sensor/lis3dh_acc_driver.c" />
+      <file file_name="../../../Sensor/scd4x_i2c.c" />
+      <file file_name="../../../Sensor/sensirion_common.c" />
+      <file file_name="../../../Sensor/sensirion_i2c.c" />
+      <file file_name="../../../Sensor/sensirion_i2c_hal.c" />
+      <file file_name="../../../Sensor/sps30.c" />
+    </folder>
   </project>
   <configuration
     Name="Release"
