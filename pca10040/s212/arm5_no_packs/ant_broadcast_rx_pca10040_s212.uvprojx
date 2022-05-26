@@ -646,6 +646,81 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>New Group</GroupName>
+          <Files>
+            <File>
+              <FileName>lis3dh_acc_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\lis3dh_acc_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>lis3dh_acc_driver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\lis3dh_acc_driver.h</FilePath>
+            </File>
+            <File>
+              <FileName>scd4x_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\scd4x_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>scd4x_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\scd4x_i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_common.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_common.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_common.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_common.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_i2c_hal.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_i2c_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>sensirion_i2c_hal.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sensirion_i2c_hal.h</FilePath>
+            </File>
+            <File>
+              <FileName>sps_git_version.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sps_git_version.h</FilePath>
+            </File>
+            <File>
+              <FileName>sps30.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Sensor\sps30.c</FilePath>
+            </File>
+            <File>
+              <FileName>sps30.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\Sensor\sps30.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>

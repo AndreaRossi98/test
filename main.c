@@ -63,8 +63,8 @@ struct val_campionati{
     float Temp;
     float Hum;
     float Pres;
-    float PM2p5;
     float PM1p0;    //controlla che sia corretto, scegliere quali valori guardare di PM
+    float PM2p5;
     float CO2;
     float CO;
     float NO2;
@@ -108,7 +108,7 @@ struct bme280_data          measure_bme280;     //struct for measured values by 
 struct sps30_measurement    measure_sps30;      //struct for measured values by SPS30
 struct lis3dh_data          measure_lis3dh;     //struct for measured values by LIS3DH
 struct mics6814_data        measure_mics6814;   //struct for measured values by MICS6814
-struct scd4x_data          measure_scd4x;     //struct for measured values by SCD41
+struct scd4x_data           measure_scd4x;     //struct for measured values by SCD41
 //=============================================================================================================================================================================
 
 //=============================================================================================================================================================================
@@ -211,7 +211,7 @@ static void utils_setup(void)
 
 /*
 *   Si può aggiungere funzione per lettura e scrittura
-*   in memoria non volatile
+*   in memoria non volatile nrf_nvmc
 */
 
 //=============================================================================================================================================================================
@@ -226,7 +226,7 @@ void ant_send(int campione, int counter, int quat1, int quat2, int quat3, int qu
 
     memset(message_payload, 0, ANT_STANDARD_DATA_PAYLOAD_SIZE);
     // Assign a new value to the broadcast data.
-    message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 8] = 11; //DEVICENUMBER
+    message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 8] = 1; //DEVICENUMBER
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 7] = campione; 
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 6] = 0;
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 5] = counter;
@@ -253,7 +253,8 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
             case EVENT_RX:
                 if (p_ant_evt->message.ANT_MESSAGE_ucMesgID == MESG_BROADCAST_DATA_ID)
                 {
-                    
+
+if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00]) printf("Connesso");                    
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
                         stato=0;	//ferma l'acquisizione												
@@ -343,13 +344,14 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
     //controllo della batteria, ogni quanto? come il campionamento, e come fare controllo? voltage divider?
     //err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
     APP_ERROR_CHECK(err_code);
-
+printf("Sono nel repeated timer handler!!\n");
     //1 sec
     //Lettura dati VOC
     
     //2 sec
     if ((rtc_count % _2_SEC) == 0)
     {
+        //ant_send(1, 1, 11, 11, 11, 11);
         //invio ant
     }
 
@@ -360,25 +362,27 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
         //rtc_count = 0 se non mi serve intervallo più grande
         flag_misurazioni = 1; //eseguire misurazioni ogni 20 sec nel main
     }
-									                  
+    
+    //1 ora per sgp30 baseline iaq (capire se serve)                                                                                     
 }
 //=============================================================================================================================================================================
 
 
 int main(void)
 {
+printf("inizio\n");
     nrf_gpio_cfg_output(LED);
     nrf_gpio_pin_set(LED);
     //Inizializzazione di tutte le componenti
     log_init();
     saadc_init();
     twi_init();
+    printf("Sono qua1\n");
     softdevice_setup();
     ant_channel_rx_broadcast_setup();
     utils_setup();
     NRF_LOG_INFO("ANT Broadcast started.");
-
-
+printf("Sono qua\n");
     sd_ant_channel_radio_tx_power_set(BROADCAST_CHANNEL_NUMBER, RADIO_TX_POWER_LVL_4, NULL); 	//potenza trasmissione
     uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
     memset(message_addr, 11, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
@@ -421,7 +425,7 @@ int main(void)
             float partial_calc = 0;        //variable to maintein partial calculation
 //ha senso guardare se restituiscono o meno errore queste funzioni?
             
-            //unire sps e scd per fare un unico delay
+            //unire sps e scd per fare un unico delay, o separarli per consumo di corrente massimo disponibile
             
             //SPS30 
             sps30_wake_up();
@@ -444,7 +448,7 @@ int main(void)
             measure_mics6814.NO2 = pow(10, (log10(partial_calc) -0.804)/(1.026))*1000;
             nrfx_saadc_sample_convert(CO_CHANNEL, &adc_val); //A3
             partial_calc = (5 - adc_to_volts(adc_val))/adc_to_volts(adc_val);
-            measure_mics6814.CO = pow(10, (log10(partial_calc)-0.55)/(-0.85))*1000;      //controlla questa formula
+            measure_mics6814.CO = pow(10, (log10(partial_calc)-0.55)/(-0.85));
             
             //BME280
             bme280_set_sensor_mode(BME280_FORCED_MODE, &dev_bme280);
@@ -456,6 +460,7 @@ int main(void)
 
         //NRF_LOG_FLUSH();
         nrf_pwr_mgmt_run();
+        __WFI();//GO INTO LOW POWER MODE
     }
 }
 

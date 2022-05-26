@@ -1,6 +1,6 @@
 Dependencies for Project 'ant_broadcast_rx_pca10040_s212', Target 'nrf52832_xxaa': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (..\..\..\main.c)(0x6274EFD7)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
+F (..\..\..\main.c)(0x6283658D)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\main.o --omf_browse .\_build\main.crf --depend .\_build\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
@@ -21,7 +21,7 @@ I (..\..\..\..\..\..\..\components\boards\boards.h)(0x62489480)
 I (..\..\..\..\..\..\..\modules\nrfx\hal\nrf_gpio.h)(0x62489573)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf_peripherals.h)(0x609E7BDA)
@@ -88,13 +88,13 @@ I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi_twim.h)(0x62489572
 I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twim.h)(0x62489573)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi.h)(0x62489571)
 I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twi.h)(0x62489573)
-F (..\config\sdk_config.h)(0x6274E891)()
+F (..\config\sdk_config.h)(0x6280EDC1)()
 F (..\..\..\..\..\..\..\components\boards\boards.c)(0x62489480)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\boards.o --omf_browse .\_build\boards.crf --depend .\_build\boards.d)
 I (..\..\..\..\..\..\..\components\boards\boards.h)(0x62489480)
 I (..\..\..\..\..\..\..\modules\nrfx\hal\nrf_gpio.h)(0x62489573)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -145,7 +145,7 @@ I (..\..\..\..\..\..\..\components\boards\boards.h)(0x62489480)
 I (..\..\..\..\..\..\..\modules\nrfx\hal\nrf_gpio.h)(0x62489573)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf.h)(0x609E7BD8)
@@ -198,7 +198,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -228,7 +228,7 @@ F (..\..\..\..\..\..\..\integration\nrfx\legacy\nrf_drv_uart.c)(0x62489570)(--c9
 I (..\..\..\..\..\..\..\integration\nrfx\legacy\nrf_drv_uart.h)(0x624AFB97)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -278,7 +278,7 @@ F (..\..\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic.c)(0x62489577)(--c99 -c --c
 I (..\..\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic.h)(0x62489577)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -324,7 +324,7 @@ I (..\..\..\..\..\..\..\modules\nrfx\soc\nrfx_atomic_internal.h)(0x62489577)
 F (..\..\..\..\..\..\..\modules\nrfx\drivers\src\nrfx_gpiote.c)(0x62489572)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\nrfx_gpiote.o --omf_browse .\_build\nrfx_gpiote.crf --depend .\_build\nrfx_gpiote.d)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -384,7 +384,7 @@ I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_types.h)(0x62489488)
 F (..\..\..\..\..\..\..\modules\nrfx\drivers\src\prs\nrfx_prs.c)(0x62489572)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\nrfx_prs.o --omf_browse .\_build\nrfx_prs.crf --depend .\_build\nrfx_prs.d)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -441,7 +441,7 @@ I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_types.h)(0x62489488)
 F (..\..\..\..\..\..\..\modules\nrfx\drivers\src\nrfx_uart.c)(0x62489572)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\nrfx_uart.o --omf_browse .\_build\nrfx_uart.crf --depend .\_build\nrfx_uart.d)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -501,7 +501,7 @@ I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_types.h)(0x62489488)
 F (..\..\..\..\..\..\..\modules\nrfx\drivers\src\nrfx_uarte.c)(0x62489572)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\nrfx_uarte.o --omf_browse .\_build\nrfx_uarte.crf --depend .\_build\nrfx_uarte.d)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -563,7 +563,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -646,7 +646,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -696,7 +696,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\libraries\log\nrf_log.h)(0x62489488)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\libraries\util\app_util.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -726,7 +726,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -760,7 +760,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\app_util_platform.h)(0x6248948
 I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_nvic.h)(0x5C124FC8)
 F (..\..\..\..\..\..\..\components\libraries\timer\app_timer2.c)(0x62489489)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\app_timer2.o --omf_browse .\_build\app_timer2.crf --depend .\_build\app_timer2.d)
 I (..\..\..\..\..\..\..\components\libraries\timer\app_timer.h)(0x62489489)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\app_error.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
@@ -849,7 +849,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
 F (..\..\..\..\..\..\..\components\libraries\timer\drv_rtc.c)(0x6248948A)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\drv_rtc.o --omf_browse .\_build\drv_rtc.crf --depend .\_build\drv_rtc.d)
 I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
 I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
@@ -909,7 +909,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -937,7 +937,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1024,7 +1024,7 @@ I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPa
 I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52\nrf_mbr.h)(0x5C124FC8)
 I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_svc.h)(0x5C124FC8)
 I (..\..\..\..\..\..\..\components\libraries\atomic_fifo\nrf_atfifo.h)(0x62489482)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nrf_assert.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error.h)(0x5C124FC8)
@@ -1044,7 +1044,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1073,7 +1073,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1115,7 +1115,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1146,7 +1146,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1179,7 +1179,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error.h)(0x5C124FC8)
 I (..\..\..\..\..\..\..\components\libraries\balloc\nrf_balloc.h)(0x6261127C)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\app_util_platform.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf.h)(0x609E7BD8)
@@ -1219,7 +1219,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1289,7 +1289,7 @@ I (..\..\..\..\..\..\..\components\libraries\atomic\nrf_atomic.h)(0x62489482)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1324,7 +1324,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1354,7 +1354,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1389,7 +1389,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1418,7 +1418,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1446,7 +1446,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1494,7 +1494,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1559,7 +1559,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1606,7 +1606,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1657,7 +1657,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1729,10 +1729,10 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
 F (..\..\..\..\..\..\..\external\segger_rtt\SEGGER_RTT_Syscalls_KEIL.c)(0x6248956F)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\segger_rtt_syscalls_keil.o --omf_browse .\_build\segger_rtt_syscalls_keil.crf --depend .\_build\segger_rtt_syscalls_keil.d)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
@@ -1795,7 +1795,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
 I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602577D6)
 F (..\..\..\..\..\..\..\components\softdevice\common\nrf_sdh.c)(0x62489493)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\nrf_sdh.o --omf_browse .\_build\nrf_sdh.crf --depend .\_build\nrf_sdh.d)
@@ -1803,7 +1803,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1848,7 +1848,7 @@ I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
-I (..\config\sdk_config.h)(0x6274E891)
+I (..\config\sdk_config.h)(0x6280EDC1)
 I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
 I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
 I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
@@ -1885,6 +1885,215 @@ I (..\..\..\..\..\..\..\components\libraries\log\nrf_log.h)(0x62489488)
 I (..\..\..\..\..\..\..\components\libraries\log\src\nrf_log_internal.h)(0x62489488)
 I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_instance.h)(0x62489488)
 I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_types.h)(0x62489488)
+F (..\..\..\Sensor\lis3dh_acc_driver.c)(0x628745BF)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\lis3dh_acc_driver.o --omf_browse .\_build\lis3dh_acc_driver.crf --depend .\_build\lis3dh_acc_driver.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
+I (..\..\..\..\..\..\..\integration\nrfx\legacy\nrf_drv_twi.h)(0x62489570)
+I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
+I (..\config\sdk_config.h)(0x6280EDC1)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\system_nrf52.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_bitfields.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf51_to_nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_name_change.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf_peripherals.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52832_peripherals.h)(0x609E7BDA)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_glue.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\legacy/apply_old_config.h)(0x62489570)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs_nrf52832.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\nrf_assert.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52\nrf_mbr.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_svc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util_platform.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_nvic.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error.h)(0x6248948B)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_coredep.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_atomic.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_resources.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_sd_def.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_errors.h)(0x62489571)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twim.h)(0x62489572)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi_twim.h)(0x62489572)
+I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twim.h)(0x62489573)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi.h)(0x62489571)
+I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twi.h)(0x62489573)
+I (..\..\..\Sensor\lis3dh_acc_driver.h)(0x627B84F6)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_common.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_os.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_macros.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\experimental_section_vars\nrf_section.h)(0x62489487)
+I (..\..\..\..\..\..\..\components\libraries\strerror\nrf_strerror.h)(0x62489489)
+I (..\..\..\..\..\..\..\components\libraries\log\src\nrf_log_internal.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_instance.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_types.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_ctrl.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\log\src\nrf_log_ctrl_internal.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_backend_interface.h)(0x62489488)
+I (..\..\..\..\..\..\..\components\libraries\memobj\nrf_memobj.h)(0x62489489)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (..\..\..\..\..\..\..\components\libraries\balloc\nrf_balloc.h)(0x6261127C)
+I (..\..\..\..\..\..\..\components\libraries\log\nrf_log_default_backends.h)(0x624AFA0D)
+F (..\..\..\Sensor\lis3dh_acc_driver.h)(0x627B84F6)()
+F (..\..\..\Sensor\scd4x_i2c.c)(0x6220E8A8)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\scd4x_i2c.o --omf_browse .\_build\scd4x_i2c.crf --depend .\_build\scd4x_i2c.d)
+I (..\..\..\Sensor\scd4x_i2c.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_i2c.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_i2c_hal.h)(0x6220E8A8)
+F (..\..\..\Sensor\scd4x_i2c.h)(0x6220E8A8)()
+F (..\..\..\Sensor\sensirion_common.c)(0x6220E8A8)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\sensirion_common.o --omf_browse .\_build\sensirion_common.crf --depend .\_build\sensirion_common.d)
+I (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+F (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)()
+F (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)()
+F (..\..\..\Sensor\sensirion_i2c.c)(0x6220E8A8)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\sensirion_i2c.o --omf_browse .\_build\sensirion_i2c.crf --depend .\_build\sensirion_i2c.d)
+I (..\..\..\Sensor\sensirion_i2c.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_i2c_hal.h)(0x6220E8A8)
+F (..\..\..\Sensor\sensirion_i2c.h)(0x6220E8A8)()
+F (..\..\..\Sensor\sensirion_i2c_hal.c)(0x623B3155)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\sensirion_i2c_hal.o --omf_browse .\_build\sensirion_i2c_hal.crf --depend .\_build\sensirion_i2c_hal.d)
+I (..\..\..\..\..\..\..\components\libraries\delay\nrf_delay.h)(0x62489487)
+I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
+I (..\config\sdk_config.h)(0x6280EDC1)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\system_nrf52.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_bitfields.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf51_to_nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_name_change.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf_peripherals.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52832_peripherals.h)(0x609E7BDA)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_glue.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\legacy/apply_old_config.h)(0x62489570)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs_nrf52832.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\nrf_assert.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52\nrf_mbr.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_svc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util_platform.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_nvic.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error.h)(0x6248948B)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_coredep.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_atomic.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_resources.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_sd_def.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_errors.h)(0x62489571)
+I (..\..\..\..\..\..\..\integration\nrfx\legacy\nrf_drv_twi.h)(0x62489570)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twim.h)(0x62489572)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi_twim.h)(0x62489572)
+I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twim.h)(0x62489573)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers\include\nrfx_twi.h)(0x62489571)
+I (..\..\..\..\..\..\..\modules\nrfx\hal/nrf_twi.h)(0x62489573)
+I (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (..\..\..\Sensor\sensirion_i2c_hal.h)(0x6220E8A8)
+F (..\..\..\Sensor\sensirion_i2c_hal.h)(0x6220E8A8)()
+F (..\..\..\Sensor\sps_git_version.h)(0x6220EAAD)()
+F (..\..\..\Sensor\sps30.c)(0x627B712D)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\sps30.o --omf_browse .\_build\sps30.crf --depend .\_build\sps30.d)
+I (..\..\..\Sensor\sps30.h)(0x627B7065)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (..\..\..\Sensor\sensirion_common.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_config.h)(0x6220E8A8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (..\..\..\Sensor\sensirion_i2c.h)(0x6220E8A8)
+I (..\..\..\Sensor\sensirion_i2c_hal.h)(0x6220E8A8)
+I (..\..\..\Sensor\sps_git_version.h)(0x6220EAAD)
+I (..\..\..\..\..\..\..\components\libraries\delay\nrf_delay.h)(0x62489487)
+I (..\..\..\..\..\..\..\modules\nrfx\nrfx.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_config.h)(0x62489570)
+I (..\config\sdk_config.h)(0x6280EDC1)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_common.h)(0x624D39D1)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25E516)
+I (C:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8FA234)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\system_nrf52.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_bitfields.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf51_to_nrf52.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52_name_change.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\compiler_abstraction.h)(0x609E7BD8)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf_peripherals.h)(0x609E7BDA)
+I (C:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include\nrf52832_peripherals.h)(0x609E7BDA)
+I (..\..\..\..\..\..\..\integration\nrfx\nrfx_glue.h)(0x62489570)
+I (..\..\..\..\..\..\..\integration\nrfx\legacy/apply_old_config.h)(0x62489570)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_irqs_nrf52832.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\nrf_assert.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\nordic_common.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52\nrf_mbr.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_svc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_util_platform.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_error_soc.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_nvic.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error.h)(0x6248948B)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_errors.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\libraries\util\app_error_weak.h)(0x6248948B)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_coredep.h)(0x62489577)
+I (..\..\..\..\..\..\..\modules\nrfx\soc/nrfx_atomic.h)(0x62489577)
+I (..\..\..\..\..\..\..\components\libraries\util\sdk_resources.h)(0x6248948B)
+I (..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf_sd_def.h)(0x5C124FC8)
+I (..\..\..\..\..\..\..\modules\nrfx\drivers/nrfx_errors.h)(0x62489571)
+F (..\..\..\Sensor\sps30.h)(0x627B7065)()
 F (RTE\Device\nRF52832_xxAB\arm_startup_nrf52.s)(0x609E7BDA)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config  --cpreproc_opts=-DAPP_TIMER_V2,-DAPP_TIMER_V2_RTC1_ENABLED,-DBOARD_PCA10040,-DCONFIG_GPIO_AS_PINRESET,-DFLOAT_ABI_HARD,-DNRF52,-DNRF52832_XXAA,-DNRF52_PAN_74,-DS212,-DSOFTDEVICE_PRESENT,-D__HEAP_SIZE=8192,-D__STACK_SIZE=8192-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "NRF52832_XXAB SETA 1" --pd "_RTE_ SETA 1" --pd "APP_TIMER_V2 SETA 1" --pd "APP_TIMER_V2_RTC1_ENABLED SETA 1" --pd "BOARD_PCA10040 SETA 1" --pd "CONFIG_GPIO_AS_PINRESET SETA 1" --pd "FLOAT_ABI_HARD SETA 1" --pd "NRF52 SETA 1" --pd "NRF52832_XXAA SETA 1" --pd "NRF52_PAN_74 SETA 1" --pd "S212 SETA 1" --pd "SOFTDEVICE_PRESENT SETA 1" --pd "__HEAP_SIZE SETA 8192" --pd "__STACK_SIZE SETA 8192"--list .\_build\arm_startup_nrf52.lst --xref -o .\_build\arm_startup_nrf52.o --depend .\_build\arm_startup_nrf52.d)
 F (RTE\Device\nRF52832_xxAB\system_nrf52.c)(0x609E7BDA)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\..\..\config -I ..\..\..\..\..\..\..\components -I ..\..\..\..\..\..\..\components\ant\ant_channel_config -I ..\..\..\..\..\..\..\components\boards -I ..\..\..\..\..\..\..\components\libraries\atomic -I ..\..\..\..\..\..\..\components\libraries\atomic_fifo -I ..\..\..\..\..\..\..\components\libraries\balloc -I ..\..\..\..\..\..\..\components\libraries\bsp -I ..\..\..\..\..\..\..\components\libraries\button -I ..\..\..\..\..\..\..\components\libraries\delay -I ..\..\..\..\..\..\..\components\libraries\experimental_section_vars -I ..\..\..\..\..\..\..\components\libraries\hardfault -I ..\..\..\..\..\..\..\components\libraries\hardfault\nrf52 -I ..\..\..\..\..\..\..\components\libraries\log -I ..\..\..\..\..\..\..\components\libraries\log\src -I ..\..\..\..\..\..\..\components\libraries\memobj -I ..\..\..\..\..\..\..\components\libraries\mutex -I ..\..\..\..\..\..\..\components\libraries\pwr_mgmt -I ..\..\..\..\..\..\..\components\libraries\ringbuf -I ..\..\..\..\..\..\..\components\libraries\scheduler -I ..\..\..\..\..\..\..\components\libraries\sortlist -I ..\..\..\..\..\..\..\components\libraries\strerror -I ..\..\..\..\..\..\..\components\libraries\timer -I ..\..\..\..\..\..\..\components\libraries\util -I ..\..\..\..\..\..\..\components\softdevice\common -I ..\..\..\..\..\..\..\components\softdevice\s212\headers -I ..\..\..\..\..\..\..\components\softdevice\s212\headers\nrf52 -I ..\..\..\..\..\..\..\external\fprintf -I ..\..\..\..\..\..\..\external\segger_rtt -I ..\..\..\..\..\..\..\integration\nrfx -I ..\..\..\..\..\..\..\integration\nrfx\legacy -I ..\..\..\..\..\..\..\modules\nrfx -I ..\..\..\..\..\..\..\modules\nrfx\drivers\include -I ..\..\..\..\..\..\..\modules\nrfx\hal -I ..\config --reduce_paths-I.\RTE\_nrf52832_xxaa-IC:\Users\andre\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\andre\AppData\Local\Arm\Packs\NordicSemiconductor\nRF_DeviceFamilyPack\8.40.3\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DNRF52832_XXAB -D_RTE_ -DAPP_TIMER_V2 -DAPP_TIMER_V2_RTC1_ENABLED -DBOARD_PCA10040 -DCONFIG_GPIO_AS_PINRESET -DFLOAT_ABI_HARD -DNRF52 -DNRF52832_XXAA -DNRF52_PAN_74 -DS212 -DSOFTDEVICE_PRESENT -D__HEAP_SIZE="8192" -D__STACK_SIZE="8192"-o .\_build\system_nrf52.o --omf_browse .\_build\system_nrf52.crf --depend .\_build\system_nrf52.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
