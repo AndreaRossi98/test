@@ -40,7 +40,7 @@
 #define TWI_ADDRESSES   127         //Number of possible TWI addresses.
 #define APP_ANT_OBSERVER_PRIO   1   // Application's ANT observer priority. You shouldn't need to modify this value.
 #define SAADC_BATTERY   0           //Canale tensione della batteria
-#define TIMEOUT_VALUE   25   //1000       // 25 mseconds timer time-out value. Interrupt a 40Hz
+#define TIMEOUT_VALUE   1000   //1000       // 25 mseconds timer time-out value. Interrupt a 40Hz
 #define START_ADDR  0x00011200      //indirizzo di partenza per salvataggio dati in memoria non volatile
 #define LED             07
 
@@ -226,7 +226,7 @@ void ant_send(int campione, int counter, int quat1, int quat2, int quat3, int qu
 
     memset(message_payload, 0, ANT_STANDARD_DATA_PAYLOAD_SIZE);
     // Assign a new value to the broadcast data.
-    message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 8] = 1; //DEVICENUMBER
+    message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 8] = 4; //DEVICENUMBER
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 7] = campione; 
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 6] = 0;
     message_payload[ANT_STANDARD_DATA_PAYLOAD_SIZE - 5] = counter;
@@ -344,7 +344,7 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
     //controllo della batteria, ogni quanto? come il campionamento, e come fare controllo? voltage divider?
     //err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
     APP_ERROR_CHECK(err_code);
-printf("Sono nel repeated timer handler!!\n");
+
     //1 sec
     //Lettura dati VOC
     
@@ -353,6 +353,8 @@ printf("Sono nel repeated timer handler!!\n");
     {
         //ant_send(1, 1, 11, 11, 11, 11);
         //invio ant
+        printf("\n2 sec\n");
+        nrf_gpio_pin_toggle(LED);
     }
 
     //20 sec
@@ -384,16 +386,19 @@ printf("inizio\n");
     NRF_LOG_INFO("ANT Broadcast started.");
 printf("Sono qua\n");
     sd_ant_channel_radio_tx_power_set(BROADCAST_CHANNEL_NUMBER, RADIO_TX_POWER_LVL_4, NULL); 	//potenza trasmissione
+    
     uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
-    memset(message_addr, 11, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
-
-    //err_code = nrf_drv_saadc_sample_convert(SAADC_REFERENCE, &sample);  //campiona tensione alimentazione (1.8V)
-    message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE - 1] = adc_val;  //invia campione nell'ultimo byte del payload
+    memset(message_addr, 4, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
 		
     err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                            ANT_STANDARD_DATA_PAYLOAD_SIZE,
                                            message_addr);
-    
+printf("Invio dato: ");
+for(i=0;i<8;i++)
+{
+printf("%d", message_addr[i]);
+}
+printf("\n\n");
     app_timer_init();
     err_code = app_timer_create(&m_repeated_timer_id,
                             APP_TIMER_MODE_REPEATED,
@@ -406,11 +411,12 @@ printf("Sono qua\n");
     
     err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
     APP_ERROR_CHECK(err_code);	
-
+/*
     sps30_init();
     //scd41 non serve init
     bme280_init_set(&dev_bme280);
     lis3dh_init();
+*/
     /* 
      * Inizializzazione dei sensori e settaggio dei parametri con le funzioni apposite
      * Tenere traccia del giorno e vedere quanto è passato per fare pulizia della ventola
@@ -420,7 +426,7 @@ printf("Sono qua\n");
     // Main loop.
     for (;;)
     {
-        if(flag_misurazioni == 1)   //esegui tutte le misurazioni tranne VOC
+/*        if(flag_misurazioni == 1)   //esegui tutte le misurazioni tranne VOC
         {
             float partial_calc = 0;        //variable to maintein partial calculation
 //ha senso guardare se restituiscono o meno errore queste funzioni?
@@ -457,7 +463,7 @@ printf("Sono qua\n");
             //LIS3DH
             //scegliere ogni quanto campionare         
         }
-
+*/
         //NRF_LOG_FLUSH();
         nrf_pwr_mgmt_run();
         __WFI();//GO INTO LOW POWER MODE
