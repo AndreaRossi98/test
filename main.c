@@ -257,7 +257,17 @@ printf("\nRicevuto: ");
 for(int i = 0;i<8;i++)
 printf("%d", p_ant_evt->message.ANT_MESSAGE_aucPayload [i]);
 printf("\n");
-//if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00]) printf("Connesso");                    
+
+if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x06 )
+{ //richiesta di connessione
+uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
+memset(message_addr, 4, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
+err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
+                                          ANT_STANDARD_DATA_PAYLOAD_SIZE,
+                                           message_addr);
+//printf("Errore invio dati %d\n\n", err_code); 
+}
+                    
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
                         stato=0;	//ferma l'acquisizione												
@@ -315,7 +325,7 @@ static void ant_channel_rx_broadcast_setup(void)
     ant_channel_config_t broadcast_channel_config =
     {
         .channel_number    = BROADCAST_CHANNEL_NUMBER,
-        .channel_type      = CHANNEL_TYPE_SLAVE,
+        .channel_type      = CHANNEL_TYPE_SLAVE,     //CHANNEL_TYPE_SLAVE,
         .ext_assign        = 0x00,
         .rf_freq           = RF_FREQ,
         .transmission_type = CHAN_ID_TRANS_TYPE,
@@ -391,12 +401,13 @@ printf("Sono qua\n");
     
     uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
     memset(message_addr, 4, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
-for(i=0;i<5;i++){		
+for(i=0;i<1;i++){		
     err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                            ANT_STANDARD_DATA_PAYLOAD_SIZE,
                                            message_addr);
 nrf_delay_ms(500);}
 printf("Invio dato: ");
+err_code = NRF_SUCCESS;
 for(i=0;i<8;i++)
 {
 printf("%d", message_addr[i]);
@@ -412,7 +423,7 @@ printf("\n\n");
     err_code = nrf_pwr_mgmt_init();
     APP_ERROR_CHECK(err_code);
 printf("Timer\n");    
-    err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
+    //err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
     APP_ERROR_CHECK(err_code);	
 /*
     sps30_init();

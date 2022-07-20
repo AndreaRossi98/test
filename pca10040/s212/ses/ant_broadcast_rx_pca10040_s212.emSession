@@ -22,8 +22,11 @@
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;Application"/>
+  <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_ANT"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_Drivers"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_Libraries"/>
+  <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_Log"/>
+  <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_Segger_RTT"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;nRF_SoftDevice"/>
   <ProjectSessionItem path="ant_broadcast_rx_pca10040_s212;ant_broadcast_rx_pca10040_s212;Sensori"/>
  </Project>
@@ -58,12 +61,14 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="28" y="355" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="345" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="34" y="58" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="55" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="109" y="137" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/ant_parameters.h" selected="0" top="121" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="87" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/ant/ant_channel_config/ant_channel_config.h" selected="0" top="73" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="425" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="400" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="78" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="52" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="137" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/ant_parameters.h" selected="0" top="121" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="68" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/ant/ant_channel_config/ant_channel_config.h" selected="0" top="62" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../../components/libraries/strerror/nrf_strerror.c" selected="0" top="36" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="61" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/nrf_error.h" selected="0" top="45" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="50" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/ant/ant_channel_config/ant_channel_config.c" selected="0" top="34" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="268" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/ant_interface.h" selected="0" top="249" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="77" y="66" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/nrf_error.h" selected="0" top="57" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="ant_broadcast_rx_pca10040_s212" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/Sensor" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
