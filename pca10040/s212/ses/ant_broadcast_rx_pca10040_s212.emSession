@@ -61,8 +61,8 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="425" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="409" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="78" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="52" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="222" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="3" path="../../../main.c" selected="1" top="224" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="25" y="78" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="52" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="8" y="137" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/softdevice/s212/headers/ant_parameters.h" selected="0" top="121" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="13" y="68" useTextEdit="1" openedFrom="C:/nrf_sdk/nRF5_SDK_17.1.0_ddde560/examples/ant/ant_broadcast/test_ANT/main.c" useBinaryEdit="0" left="0" path="../../../../../../../components/ant/ant_channel_config/ant_channel_config.h" selected="0" top="62" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../../components/libraries/strerror/nrf_strerror.c" selected="0" top="36" codecName="Default"/>

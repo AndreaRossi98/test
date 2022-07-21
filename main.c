@@ -277,12 +277,16 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
                         NRF_LOG_INFO("Ricevuto messaggio di stop acquisizione");
                           
                     }
-                    if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x00)   //se il primo byte del payload è zero avvia l'acquisizione
+                    if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x06 && connesso == 1)   //se il primo byte del payload è zero avvia l'acquisizione
                     {
                         NRF_LOG_INFO("Inizio acquisizione");	
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
-                        nrf_gpio_pin_clear(LED);
-                        ant_send(1,1,1,1,1,1);
+                        //ant_send(1,1,1,1,1,1);
+                        uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
+                        memset(message_addr, 1, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
+                        err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
+                                                                  ANT_STANDARD_DATA_PAYLOAD_SIZE,
+                                                                   message_addr);
                         count=0;
                         i=0;
                         stato = 1;
@@ -352,10 +356,11 @@ static void ant_channel_rx_broadcast_setup(void)
   %%%%%%%%%%%%%% TIMER HANDLER %%%%%%%%%%%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
-
+int valore = 0;
 static void repeated_timer_handler(void * p_context)  //app timer, faccio scattare ogni un secondo
 { 
     rtc_count ++;
+    nrf_gpio_pin_toggle(LED);
     //controllo della batteria, ogni quanto? come il campionamento, e come fare controllo? voltage divider?
     //err_code = nrf_drv_saadc_sample_convert(SAADC_BATTERY, &sample);   //lettura ADC
     APP_ERROR_CHECK(err_code);
@@ -364,12 +369,17 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
     //Lettura dati VOC
     
     //2 sec
-    if ((rtc_count % _2_SEC) == 0)
+    if ((rtc_count % _2_SEC) == 0 && stato ==1 )
     {
         //ant_send(1, 1, 11, 11, 11, 11);
         //invio ant
         printf("\n2 sec\n");
-        nrf_gpio_pin_toggle(LED);
+valore++;
+uint8_t  message_addr[8] = {valore, valore +2, valore +4, valore +6, valore +8, valore+10, valore +12, valore+14};
+//err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
+//                                           ANT_STANDARD_DATA_PAYLOAD_SIZE,
+//                                           message_addr);
+
     }
 
     //20 sec
