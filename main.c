@@ -242,7 +242,7 @@ void ant_send(int campione, int counter, int quat1, int quat2, int quat3, int qu
     APP_ERROR_CHECK(err_code);
     NRF_LOG_INFO("Messaggio numero %d, ret code ant broadcast: %d", counter, err_code);
 }
-
+int connesso = 0;
 //Function for handling stack event
 void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
 {
@@ -253,20 +253,21 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
             case EVENT_RX:
                 if (p_ant_evt->message.ANT_MESSAGE_ucMesgID == MESG_BROADCAST_DATA_ID)
                 {
-printf("\nRicevuto: ");
-for(int i = 0;i<8;i++)
-printf("%d", p_ant_evt->message.ANT_MESSAGE_aucPayload [i]);
-printf("\n");
+                    printf("\nRicevuto: ");
+                    for(int i = 0;i<8;i++)
+                    printf("%d", p_ant_evt->message.ANT_MESSAGE_aucPayload [i]);
+                    printf("\n");
 
-if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x06 )
-{ //richiesta di connessione
-uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
-memset(message_addr, 4, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
-err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
-                                          ANT_STANDARD_DATA_PAYLOAD_SIZE,
-                                           message_addr);
-//printf("Errore invio dati %d\n\n", err_code); 
-}
+                    if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x06 && connesso == 0);
+                    { //richiesta di connessione
+                        uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
+                        memset(message_addr, 6, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
+                        err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
+                                                                  ANT_STANDARD_DATA_PAYLOAD_SIZE,
+                                                                   message_addr);
+                        connesso = 1;
+                        //printf("Errore invio dati %d\n\n", err_code); 
+                    }
                     
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
@@ -281,6 +282,7 @@ err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia
                         NRF_LOG_INFO("Inizio acquisizione");	
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
                         nrf_gpio_pin_clear(LED);
+                        ant_send(1,1,1,1,1,1);
                         count=0;
                         i=0;
                         stato = 1;
@@ -399,20 +401,13 @@ printf("inizio\n");
 printf("Sono qua\n");
     sd_ant_channel_radio_tx_power_set(BROADCAST_CHANNEL_NUMBER, RADIO_TX_POWER_LVL_4, NULL); 	//potenza trasmissione
     
+/*    non invio subito qua ma dopo (idea che accendo prima HW di applicazione a differenza delle altre unità
     uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
-    memset(message_addr, 4, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER
-for(i=0;i<1;i++){		
+    memset(message_addr, 6, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
     err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                            ANT_STANDARD_DATA_PAYLOAD_SIZE,
                                            message_addr);
-nrf_delay_ms(500);}
-printf("Invio dato: ");
-err_code = NRF_SUCCESS;
-for(i=0;i<8;i++)
-{
-printf("%d", message_addr[i]);
-}
-printf("\n\n");
+*/
     app_timer_init();
     err_code = app_timer_create(&m_repeated_timer_id,
                             APP_TIMER_MODE_REPEATED,
@@ -423,7 +418,7 @@ printf("\n\n");
     err_code = nrf_pwr_mgmt_init();
     APP_ERROR_CHECK(err_code);
 printf("Timer\n");    
-    //err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
+    err_code = app_timer_start(m_repeated_timer_id, APP_TIMER_TICKS(TIMEOUT_VALUE), NULL);
     APP_ERROR_CHECK(err_code);	
 /*
     sps30_init();
