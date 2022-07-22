@@ -243,6 +243,10 @@ void ant_send(int campione, int counter, int quat1, int quat2, int quat3, int qu
     NRF_LOG_INFO("Messaggio numero %d, ret code ant broadcast: %d", counter, err_code);
 }
 int connesso = 0;
+int valore = 0;
+uint8_t message_addr[8] = {6,6,6,6,6,6,6,6};
+int pacchetto = 0;
+
 //Function for handling stack event
 void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
 {
@@ -265,31 +269,68 @@ void ant_evt_handler(ant_evt_t * p_ant_evt, void * p_context)
                         err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                                                   ANT_STANDARD_DATA_PAYLOAD_SIZE,
                                                                    message_addr);
-                        connesso = 1;
-                        //printf("Errore invio dati %d\n\n", err_code); 
+                        connesso = 1; //forse non serve 
                     }
                     
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x80 )   //se il primo byte del payload è zero e l'ultimo è 128
                     { 									
                         stato=0;	//ferma l'acquisizione												
-                        nrf_gpio_pin_set(LED);
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
                         NRF_LOG_INFO("Ricevuto messaggio di stop acquisizione");
                           
                     }
-                    if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x06 && connesso == 1)   //se il primo byte del payload è zero avvia l'acquisizione
-                    {
+                    if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x06 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0x00 && connesso == 1)   //se il primo byte del payload è zero avvia l'acquisizione
+                    { //già connesso, invio dati
                         NRF_LOG_INFO("Inizio acquisizione");	
                         sd_ant_pending_transmit_clear (BROADCAST_CHANNEL_NUMBER, NULL); //svuota il buffer, utile per una seconda acquisizione
-                        //ant_send(1,1,1,1,1,1);
-                        uint8_t  message_addr[ANT_STANDARD_DATA_PAYLOAD_SIZE];
-                        memset(message_addr, 1, ANT_STANDARD_DATA_PAYLOAD_SIZE); //DEVICENUMBER	
+
+                        
+                        //gestione del doppio pacchetto in base al secondo byte
+                        if (pacchetto <2)
+                        {
+                            message_addr [1] = 0;
+                            //pacchetto = 9;
+                            message_addr [2] = 9;
+                            message_addr [3] = 9;
+                            message_addr [4] = 9;
+                            message_addr [5] = 9;
+                            message_addr [6] = 9;
+                            message_addr [7] = 9;
+
+                        }
+                        //if (pacchetto == 9)
+                        else
+                        {
+                            message_addr [1] = 9;
+                            //pacchetto = 1;
+                            message_addr [2] = 2;
+                            message_addr [3] = 2;
+                            message_addr [4] = 2;
+                            message_addr [5] = 2;
+                            message_addr [6] = 2;
+                            message_addr [7] = 2;
+                        }
+/*                        if (pacchetto == 1)
+                          pacchetto = 9;
+                        else
+                          pacchetto = 1;
+*/
+                        pacchetto++;
+                        if (pacchetto == 5)
+                          pacchetto = 0;
                         err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
                                                                   ANT_STANDARD_DATA_PAYLOAD_SIZE,
                                                                    message_addr);
+                        printf("Invio: ");
+                        for(int i = 0;i<8;i++)
+                        printf("%d", message_addr[i]);
+                        printf("\n");
                         count=0;
                         i=0;
                         stato = 1;
+
+
+
                     }   
                     if (p_ant_evt->message.ANT_MESSAGE_aucPayload [0x00] == 0x00 && p_ant_evt->message.ANT_MESSAGE_aucPayload [0x07] == 0xFF && cal_rec == 0)   
                     {       //messaggio di inizio calibrazione
@@ -356,7 +397,7 @@ static void ant_channel_rx_broadcast_setup(void)
   %%%%%%%%%%%%%% TIMER HANDLER %%%%%%%%%%%%%%%
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
-int valore = 0;
+
 static void repeated_timer_handler(void * p_context)  //app timer, faccio scattare ogni un secondo
 { 
     rtc_count ++;
@@ -375,7 +416,8 @@ static void repeated_timer_handler(void * p_context)  //app timer, faccio scatta
         //invio ant
         printf("\n2 sec\n");
 valore++;
-uint8_t  message_addr[8] = {valore, valore +2, valore +4, valore +6, valore +8, valore+10, valore +12, valore+14};
+for(int i = 1;i<8;i++)
+    message_addr[i] = valore+i;
 //err_code = sd_ant_broadcast_message_tx(BROADCAST_CHANNEL_NUMBER,         //invia messaggio di accensione
 //                                           ANT_STANDARD_DATA_PAYLOAD_SIZE,
 //                                           message_addr);
